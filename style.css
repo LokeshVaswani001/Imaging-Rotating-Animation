@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #00e676;
+  overflow-x: hidden;
+}
+
+#main {
+  position: relative;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+/* Top-right Social Icons */
+#top-icons {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+#top-icons i {
+  color: #00bcd4;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#top-icons i:hover {
+  color: #00e676;
+  transform: scale(1.2);
+}
+
+/* Navigation */
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 20px 30px;
+  border-bottom: 2px solid #00bcd4;
+  margin-top: 10px;
+}
+
+#nav-part1 h3,
+#nav-part1 i {
+  color: #00bcd4;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#nav-part2 {
+  flex: 1;
+  text-align: center;
+}
+
+#nav-part2 h1 {
+  color: #00e676;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+#nav-part3 {
+  display: flex;
+  gap: 15px;
+}
+
+#nav-part3 button {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid #00bcd4;
+  background-color: transparent;
+  color: #00e676;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#nav-part3 #btn2 {
+  background-color: #00bcd4;
+  color: #000;
+  border: none;
+}
+
+#nav-part3 button:hover {
+  transform: scale(1.05);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 50px;
+  color: #00e676;
+  text-shadow: 1px 1px 10px #00bcd4;
+}
+
+/* Image Stack Animation */
+.image-stack {
+  position: relative;
+  width: 240px;
+  height: 340px;
+  margin: 40px auto;
+}
+
+.img-rotate {
+  position: absolute;
+  width: 240px;
+  height: 340px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+  opacity: 0;
+  animation: showUp 1s ease forwards;
+}
+
+.delay1 { animation-delay: 0.5s; }
+.delay2 { animation-delay: 1.5s; }
+.delay3 { animation-delay: 2.5s; }
+.delay4 { animation-delay: 3.5s; }
+
+@keyframes showUp {
+  0% { opacity: 0; transform: scale(0.8) rotate(0deg); }
+  100% { opacity: 1; transform: scale(1) rotate(5deg); }
+}
+
+/* Bottom Text */
+#btm-left,
+#btm-right {
+  position: absolute;
+  bottom: 15px;
+  font-size: 14px;
+  color: #00e676;
+  font-weight: bold;
+}
+
+#btm-left {
+  left: 30px;
+}
+
+#btm-right {
+  right: 30px;
+}
